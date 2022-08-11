@@ -1,4 +1,5 @@
 import Table from "./Table";
+import { fetchCompanies } from "./functions";
 
 export default function TableOfCompaniesAndEmployees(props) {
   const { data } = props;
@@ -6,18 +7,7 @@ export default function TableOfCompaniesAndEmployees(props) {
   let companies = [];
   let users = [];
 
-  const fetchCompanies = () => {
-    data?.map((element) => {
-      element?.companies?.map((company) => {
-        companies.push(company);
-      });
-      element?.users?.map((user) => {
-        users.push(user);
-      });
-    });
-  };
-
-  fetchCompanies();
+  if (data) fetchCompanies(data, companies, users);
 
   return (
     <div>
