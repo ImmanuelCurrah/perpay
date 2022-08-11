@@ -13,10 +13,6 @@
         {
           "name": "company3",
           "id": 3
-        },
-        {
-          "name": "company4",
-          "id": 4
         }
       ]
     }, 
@@ -38,6 +34,24 @@
           "name": "stacey",
           "email": "stacey@gmail.com",
           "id": 3,
+          "companyId": 3
+        },
+        {
+          "name": "Beth",
+          "email": "beth@gmail.com",
+          "id": 6,
+          "companyId": 2
+        },
+        {
+          "name": "Adam",
+          "email": "adam@gmail.com",
+          "id": 4,
+          "companyId": 3
+        },
+        {
+          "name": "Rob",
+          "email": "rob@gmail.com",
+          "id": 5,
           "companyId": 3
         }
       ]

@@ -20,9 +20,10 @@ export default function Dashboard() {
   let { data } = dataState;
 
   return (
-    <div className="h-screen w-screen bg-slate-400">
+    <div className="">
       <NumberOfPayments data={data} />
       <DollarAmount data={data} />
+      <Table data={data} />
     </div>
   );
 }
