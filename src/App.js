@@ -1,7 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import "./App.css";
+import { fetchData } from "./redux/reducers/data";
 
 function App() {
+  let dispatch = useDispatch();
+
+  let dataState = useSelector((store) => {
+    return store["data"];
+  });
+
+  useEffect(() => {
+    const getData = async () => {
+      dispatch(fetchData());
+    };
+    getData();
+  }, [dispatch]);
+
+  let { data } = dataState;
+
+  console.log(data);
+
   return (
     <div className="App">
       <header className="App-header">

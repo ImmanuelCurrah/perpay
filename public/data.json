@@ -1,0 +1,65 @@
+{
+  "data" : [
+    {
+      "companies": {
+        "company1": {
+          "name": "company1",
+          "id": 1
+        },
+        "company2": {
+          "name": "company2",
+          "id": 2
+        },
+        "company3": {
+          "name": "company3",
+          "id": 3
+        },
+        "company4": {
+          "name": "company4",
+          "id": 4
+        }
+      }
+    }, 
+    {
+      "users": {
+        "user1": {
+          "name": "josh",
+          "email": "josh@gmail.com",
+          "id": 1,
+          "companyId": 1
+        },
+        "user2": {
+          "name": "jim",
+          "email": "jim@gmail.com",
+          "id": 2,
+          "companyId": 2
+        },
+        "user3": {
+          "name": "stacey",
+          "email": "stacey@gmail.com",
+          "id": 3,
+          "companyId": 3
+        }
+      }
+    },
+    {
+      "payments": {
+        "payment1": {
+          "amount": 300,
+          "paymentDate": "06/18/2018",
+          "userId": 1
+        },
+        "payment2": {
+          "amount": 50,
+          "paymentDate": "01/12/2021",
+          "userId": 2
+        },
+        "payment3": {
+          "amount": 1000,
+          "paymentDate": "10/06/2021",
+          "userId": 3
+        }
+      }
+    }
+  ]
+}
