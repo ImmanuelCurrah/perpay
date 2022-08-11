@@ -7,7 +7,9 @@ export default function Table(props) {
     <>
       <div className="w-96 m-2">
         <div className="bg-slate-500 h-52">
-          <div className="bg-slate-600 sticky top-0">{company.name}</div>
+          <div className="bg-slate-600 sticky top-0">
+            {company.name} perpay users: {users.length}
+          </div>
           <div className="bg-slate-500 h-52 overflow-auto">
             {users?.map((user, index) => {
               return (
