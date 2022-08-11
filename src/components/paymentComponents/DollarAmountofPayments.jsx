@@ -1,5 +1,12 @@
-import React from "react";
+export default function DollarAmountofPayments(props) {
+  const { data } = props;
+  let total = 0;
 
-export default function DollarAmountofPayments() {
-  return <div>DollarAmountofPayments</div>;
+  data?.map((element) => {
+    element?.payments?.map((payment) => {
+      total += payment?.amount;
+    });
+  });
+
+  return <div>${total} paid</div>;
 }

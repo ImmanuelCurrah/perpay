@@ -22,6 +22,7 @@ export default function Dashboard() {
   return (
     <div className="h-screen w-screen bg-slate-400">
       <NumberOfPayments data={data} />
+      <DollarAmount data={data} />
     </div>
   );
 }
