@@ -8,5 +8,5 @@ export default function DollarAmountofPayments(props) {
     });
   });
 
-  return <div>${total} paid</div>;
+  return <div>${total.toFixed(2)} paid</div>;
 }

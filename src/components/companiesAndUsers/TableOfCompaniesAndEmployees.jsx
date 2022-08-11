@@ -21,16 +21,16 @@ export default function TableOfCompaniesAndEmployees(props) {
 
   return (
     <div>
-      {companies?.map((company, i) => {
-        if (company.id === users[i].companyId) {
-          return (
-            <Table
-              key={i}
-              company={company}
-              users={users.filter((users) => users.companyId === company.id)}
-            />
-          );
-        }
+      {companies?.map((company, index) => {
+        return (
+          <Table
+            key={index}
+            company={company}
+            users={users.filter((user) => {
+              return user.companyId === company.id;
+            })}
+          />
+        );
       })}
     </div>
   );

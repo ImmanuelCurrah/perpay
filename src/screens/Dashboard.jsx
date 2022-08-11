@@ -20,7 +20,7 @@ export default function Dashboard() {
   let { data } = dataState;
 
   return (
-    <div className="">
+    <div>
       <NumberOfPayments data={data} />
       <DollarAmount data={data} />
       <Table data={data} />
