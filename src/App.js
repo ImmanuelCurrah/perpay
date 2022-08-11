@@ -1,10 +1,13 @@
+import Layout from "./components/layout/Layout";
 import Dashboard from "./screens/Dashboard";
 
 function App() {
   return (
-    <div className="App">
-      <Dashboard />
-    </div>
+    <>
+      <Layout>
+        <Dashboard />
+      </Layout>
+    </>
   );
 }
 

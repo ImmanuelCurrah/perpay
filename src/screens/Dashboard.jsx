@@ -18,6 +18,5 @@ export default function Dashboard() {
 
   let { data } = dataState;
 
-  console.log(data);
-  return <div>Dashboard</div>;
+  return <div className="h-screen w-screen bg-slate-400">Dashboard</div>;
 }
