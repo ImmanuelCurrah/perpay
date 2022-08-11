@@ -7,5 +7,4 @@ export const fetchCompanies = (data, companies, users) => {
       users.push(user);
     });
   });
-  return companies, users;
 };
