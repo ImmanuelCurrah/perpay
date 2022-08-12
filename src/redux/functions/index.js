@@ -21,7 +21,7 @@ export default function UniversalData() {
   return data;
 }
 
-export function ParseThroughAllUsersData(input) {
+export function parseThroughAllUsersData(input) {
   let users = [];
 
   if (input === undefined) {
