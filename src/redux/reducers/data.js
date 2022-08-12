@@ -15,7 +15,6 @@ let dataSlice = createSlice({
   initialState: initialState,
   extraReducers: (builder) => {
     builder.addCase(fetchData.fulfilled, (state, action) => {
-      state.loading = false;
       state.data = action.payload;
     });
   },
