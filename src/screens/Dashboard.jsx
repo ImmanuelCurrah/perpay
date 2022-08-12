@@ -1,13 +1,7 @@
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { fetchData } from "../redux/reducers/data";
-import {
-  SearchBar,
-  NumberOfPayments,
-  DollarAmount,
-  Table,
-  Total,
-} from "../exports";
+import { NumberOfPayments, DollarAmount, Table, Total } from "../exports";
 
 export default function Dashboard() {
   let dispatch = useDispatch();

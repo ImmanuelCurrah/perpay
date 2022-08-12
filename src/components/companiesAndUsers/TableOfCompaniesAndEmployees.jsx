@@ -10,11 +10,12 @@ export default function TableOfCompaniesAndEmployees(props) {
   if (data) fetchCompanies(data, companies, users);
 
   return (
-    <div>
+    <div className="grid grid-cols-2 gap-4">
       {companies?.map((company, index) => {
         return (
           <Table
             key={index}
+            data={data}
             company={company}
             users={users.filter((user) => {
               return user.companyId === company.id;

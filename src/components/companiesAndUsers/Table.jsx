@@ -1,27 +1,16 @@
-import React from "react";
+import { UserList, Name } from "../../exports";
 
 export default function Table(props) {
-  const { company, users } = props;
+  const { company, users, data } = props;
 
   return (
     <>
       <div className="w-96 m-2">
         <div className="bg-slate-500 h-52">
-          <div className="bg-slate-600 sticky top-0">
-            {company.name} perpay users: {users.length}
-          </div>
-          <div className="bg-slate-500 h-52 overflow-auto">
-            {users?.map((user, index) => {
-              return (
-                <div key={index}>
-                  {user.first_name} {user.last_name}
-                </div>
-              );
-            })}
-          </div>
+          <Name company={company} users={users} />
+          <UserList users={users} data={data} />
         </div>
       </div>
-      <br />
     </>
   );
 }
