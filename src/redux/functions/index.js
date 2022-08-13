@@ -18,20 +18,15 @@ export default function UniversalData() {
 
   let { data } = dataState;
 
-  return data;
+  return data.data;
 }
 
-export function parseThroughAllUsersData(input) {
+export function parseThroughAllUsersData(company) {
   let users = [];
 
-  if (input === undefined) {
-    users = UniversalData()?.map((element) =>
-      element?.users?.filter((user) => !user?.first_name.includes(input))
-    );
-  } else {
-    users = UniversalData()?.map((element) =>
-      element?.users?.filter((user) => user?.first_name.includes(input))
-    );
-  }
+  users = UniversalData().map((element) => {
+    return element?.users?.filter((user) => user.companyId === company.id);
+  });
+
   return users[1];
 }

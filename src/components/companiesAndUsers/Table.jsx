@@ -6,9 +6,7 @@ export default function Table(props) {
 
   const [users, setUsers] = useState([]);
 
-  let usersList = parseThroughAllUsersData().filter(
-    (user) => user.companyId === company.id
-  );
+  let usersList = parseThroughAllUsersData(company);
 
   useEffect(() => {
     if (usersList) {
@@ -21,7 +19,6 @@ export default function Table(props) {
     <div className="w-96 mb-16">
       <div className="bg-slate-500 h-52">
         <Name company={company} users={usersList} />
-        {/* <SearchBar usersList={usersList} setUsers={setUsers} /> */}
         <UserList data={data} users={users} />
       </div>
     </div>

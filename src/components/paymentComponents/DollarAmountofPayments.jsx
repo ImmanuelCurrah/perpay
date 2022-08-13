@@ -1,5 +1,5 @@
 export default function DollarAmountofPayments(props) {
-  const { data } = props;
+  let { data } = props;
   let total = 0;
 
   data?.map((element) => {

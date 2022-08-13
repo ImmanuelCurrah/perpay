@@ -1,13 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
 import dataReducer from "../reducers/data";
+import rootReducer from "../rootReducer/rootReducer";
 
 const store = configureStore({
-  reducer: dataReducer,
-  middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware({
-      immutableCheck: false,
-      serializableCheck: false,
-    }),
+  reducer: rootReducer,
 });
 
 export default store;
