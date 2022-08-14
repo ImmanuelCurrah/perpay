@@ -1,16 +1,9 @@
-import {
-  NumberOfPayments,
-  DollarAmount,
-  Table,
-  TotalCompanies,
-} from "../exports";
+import { Table, NumbersContainer } from "../exports";
 
 export default function Dashboard() {
   return (
     <div>
-      <NumberOfPayments />
-      <DollarAmount />
-      <TotalCompanies />
+      <NumbersContainer />
       <Table />
     </div>
   );

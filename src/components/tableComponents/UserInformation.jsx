@@ -1,4 +1,4 @@
-import { findNumberOfUserPayments } from "../../../exports/index";
+import { findNumberOfUserPayments } from "../../exports/index";
 
 export default function UserInformation(props) {
   const { user, data } = props;

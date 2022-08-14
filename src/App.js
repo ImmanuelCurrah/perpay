@@ -3,7 +3,7 @@ import Dashboard from "./screens/Dashboard";
 
 function App() {
   return (
-    <div className="overflow-auto">
+    <div>
       <Layout>
         <Dashboard />
       </Layout>

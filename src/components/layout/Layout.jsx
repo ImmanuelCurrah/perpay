@@ -4,7 +4,7 @@ import NavBar from "../../UI/NavBar";
 
 export default function Layout(props) {
   return (
-    <div className="h-screen w-screen bg-slate-400 overflow-auto">
+    <div className="h-max w-screen flex flex-col items-center">
       <NavBar />
       {props.children}
       <Footer />

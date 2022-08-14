@@ -64,7 +64,11 @@ export default function useData() {
   };
 
   const setCompanies = () => {
-    return newData?.map((element) => element?.companies)[0];
+    let companies = newData?.map((element) => element?.companies)[0];
+    let middle = companies?.length / 2;
+    let end = companies?.length;
+
+    return { companies, middle, end };
   };
 
   const setUsers = () => {
@@ -76,7 +80,7 @@ export default function useData() {
       if (input === "") {
         return user;
       } else {
-        return user?.first_name.toLowerCase().includes(input);
+        return user?.first_name.toLowerCase().includes(input.toLowerCase());
       }
     });
     return filteredData;
