@@ -1,12 +1,7 @@
-export default function DollarAmountofPayments(props) {
-  let { data } = props;
-  let total = 0;
+import { useData } from "../../exports";
 
-  data?.map((element) => {
-    element?.payments?.map((payment) => {
-      total += payment?.amount;
-    });
-  });
+export default function DollarAmountofPayments() {
+  const { getTotalAmountPaid } = useData();
 
-  return <div>${total.toFixed(2)} paid</div>;
+  return <div>${getTotalAmountPaid()} paid</div>;
 }

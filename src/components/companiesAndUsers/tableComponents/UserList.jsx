@@ -1,10 +1,9 @@
-import UserInformation from "./UserInformation";
 import { useState } from "react";
-import SearchBar from "../searchBar/SearchBar";
-import { filterUsers } from "../companiesAndUsers/functions";
+import { UserInformation, SearchBar, useData } from "../../../exports/index";
 
 export default function Users(props) {
-  const { users, data } = props;
+  const { users } = props;
+  const { newData, filterUsers } = useData();
   const [input, setInput] = useState("");
 
   return (
@@ -12,7 +11,7 @@ export default function Users(props) {
       <SearchBar input={input} setInput={setInput} />
       <div className="bg-slate-500 h-52 overflow-auto">
         {filterUsers(users, input)?.map((user, index) => {
-          return <UserInformation key={index} data={data} user={user} />;
+          return <UserInformation key={index} data={newData} user={user} />;
         })}
       </div>
     </>

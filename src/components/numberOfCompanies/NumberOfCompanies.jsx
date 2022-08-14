@@ -1,15 +1,11 @@
-import React from "react";
+import { useData } from "../../exports";
 
-export default function NumberOfCompanies(props) {
-  const { data } = props;
+export default function NumberOfCompanies() {
+  const { getAllCompanies } = useData();
 
   return (
     <div>
-      There are{" "}
-      {data?.map((elements) => {
-        return elements?.companies?.length;
-      })}{" "}
-      companies with employess who use PerPay.
+      There are {getAllCompanies()} companies with employess who use PerPay.
     </div>
   );
 }

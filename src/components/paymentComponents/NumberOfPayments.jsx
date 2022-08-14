@@ -1,9 +1,7 @@
-export default function NumberOfPayments(props) {
-  const { data } = props;
+import { useData } from "../../exports";
 
-  return (
-    <div>
-      {data?.map((e) => e?.payments?.length)} payments have been recieved!
-    </div>
-  );
+export default function NumberOfPayments() {
+  const { getAllPayments } = useData();
+
+  return <div>{getAllPayments()} payments have been recieved!</div>;
 }

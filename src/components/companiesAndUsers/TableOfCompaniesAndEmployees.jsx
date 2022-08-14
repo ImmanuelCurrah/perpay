@@ -1,18 +1,13 @@
-import Table from "./Table";
-import { fetchCompanies } from "./functions";
+import Table from "./tableComponents/Table";
+import useData from "../../hooks/useData";
 
 export default function TableOfCompaniesAndEmployees(props) {
-  const { data } = props;
-
-  let companies = [];
-  let users = [];
-
-  if (data) fetchCompanies(data, companies, users);
+  const { setCompanies } = useData();
 
   return (
-    <div className="grid grid-cols-2 gap-4">
-      {companies?.map((company, index) => {
-        return <Table key={index} data={data} company={company} />;
+    <div className="grid grid-cols-2 gap-24">
+      {setCompanies()?.map((company, index) => {
+        return <Table key={index} company={company} />;
       })}
     </div>
   );
