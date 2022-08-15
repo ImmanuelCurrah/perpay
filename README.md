@@ -18,7 +18,7 @@ npm start
 
 - Generated data and stored in the public folder to be used with axios.
 
-- Created a custom hook to be able to use the data globaly and export funtions.
+- Created a custom hook to be able to use the data globally and export functions.
 
 - Created the compnents and have them display the relevant information for each one.
 
@@ -31,10 +31,12 @@ npm start
 - Tailwind CSS
 - React Icons
 - Custom Hooks
+- react-minimal-pie-chart
+- https://www.mockaroo.com/
 
 ### Challenges
 
-- Redux, I have ever used it before and tried to learn it for the assessment. It ended up not working how I wanted for a couple niche cases and felt messy. So I refactored to using custom hooks.
+- Redux, I have ever used it before and tried to learn it for the assessment. It ended up not working how I wanted for a couple niche cases and felt messy. So I refactored to custom hooks for data management.
 
 - useEffect, the more I use the hook the more I feel like I don't understand how it works. I really struggled with having my data showing up as undefined when passing it around. Especially with redux.
 
@@ -50,16 +52,18 @@ npm start
 
 - Breaking out the functionality and exports in a way so my import statemtents didn't get super messy.
 
+- I felt that the custom hook kept the data contained and well managed for this application.
+
 ### Todos or what I would do differently
 
 - Implement Redux and get it to work correctly.
 
 - The CompanyStatistics component needs cleaning up.
 
-- Find a way to add percentages, or just make the pie graphs a little more understandable. Also make them a little more beatiful, I like the idea of a donut graph.
+- Find a way to add percentages, or just make the pie graphs a little more understandable. Also make them a little more beatiful, react-minimal-pie-chart has a lot of functionality that I didn't get to explore.
 
 - Find a better ascetic for the search bar, as well as adding an overall search bar to search by company and by user. The user search bar would have access to all the users and display which company they were a part of.
 
 - Add more data and limit test what the current application can handle and change accordingly.
 
-- Add employess to the companies that would not be perpay users. That way I could display out of how many employees in a company actually use perpay. This could help judge how valuable a company's subcription is. Currently all the users displayed in the company are perpay users. I would do this by just adding another column to the users that would be a boolean. {"perpayUser" : true/false}.
+- Add employess to the companies that would not be perpay users. That way I could display out of how many employees in a company actually use perpay. This could help judge how valuable a company's subcription is. Currently all the users displayed in the company are perpay users. I would do this by just adding another column to the users that would be a boolean. {"perpayUser" : true/false}. Since the data that I am using is randomly generated, it would be hard to keep track of that in the payments, as they have a userId column.
