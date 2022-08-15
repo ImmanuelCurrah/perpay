@@ -86,6 +86,20 @@ export default function useData() {
     return filteredData;
   };
 
+  const findNumberOfUserPayments = (user) => {
+    let userPayments = 0;
+    let amount = 0;
+    newData?.forEach((element) => {
+      element?.payments?.forEach((payment) => {
+        if (payment.userId === user.id) {
+          userPayments += 1;
+          amount += payment.amount;
+        }
+      });
+    });
+    return { userPayments, amount };
+  };
+
   return {
     newData,
     filterUsersByCompany,
@@ -96,5 +110,6 @@ export default function useData() {
     setCompanies,
     setUsers,
     filterUsers,
+    findNumberOfUserPayments,
   };
 }

@@ -7,6 +7,6 @@ export { default as Table } from "../components/table/TableOfCompaniesAndEmploye
 export { default as UserList } from "../components/tableComponents/UserList";
 export { default as CompanyName } from "../components/tableComponents/CompanyNameAndEmployees";
 export { default as useData } from "../hooks/useData";
-export { findNumberOfUserPayments } from "../functions/index";
 export { default as PieChart } from "../components/pieChart/PieChartContainer";
 export { default as CompanyStatistics } from "../components/tableComponents/CompanyStatistics";
+export { default as ColorIndex } from "../components/colorIndex/ColorIndex";
