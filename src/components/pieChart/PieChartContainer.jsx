@@ -9,11 +9,11 @@ export default function PieChartContainer(props) {
         data={[
           {
             value: valueOne,
-            color: "#E38627",
+            color: "#C0C0C0",
           },
           {
             value: valueTwo - valueOne,
-            color: "#C13C37",
+            color: "#818589",
           },
         ]}
       />

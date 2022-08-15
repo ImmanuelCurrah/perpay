@@ -11,7 +11,7 @@ export default function Users(props) {
       {searchToggle && (
         <div className="flex flex-col items-center">
           <SearchBar input={input} setInput={setInput} />
-          <div className="h-32 overflow-auto">
+          <div className="h-32 w-full overflow-auto">
             {filterUsers(users, input)?.map((user, index) => {
               return <UserInformation key={index} data={newData} user={user} />;
             })}

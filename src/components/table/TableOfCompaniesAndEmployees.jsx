@@ -6,7 +6,7 @@ export default function TableOfCompaniesAndEmployees(props) {
   const { companies, middle, end } = setCompanies();
 
   return (
-    <div className="grid grid-cols-2 gap-4 justify-items-center my-4">
+    <div className="grid grid-cols-2 gap-4 justify-items-center my-8">
       <div>
         {companies?.slice(0, middle)?.map((company, index) => {
           return <TableOfUsersAndCompanyInfo key={index} company={company} />;

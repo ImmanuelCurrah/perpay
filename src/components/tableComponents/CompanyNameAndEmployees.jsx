@@ -14,7 +14,7 @@ export default function CompanyNameAndEmployees(props) {
 
   return (
     <div>
-      <h2>{company.name}</h2>
+      <h2 className="text-2xl underline underline-offset-1">{company.name}</h2>
       <div>
         <CompanyStatistics
           numberOfPayments={numberOfPayments}
