@@ -1,70 +1,65 @@
-# Getting Started with Create React App
+# PerPay Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simulated dashboard for internal data and statistics.
 
-## Available Scripts
+```
+clone github
+npm i
+npm start
+```
 
-In the project directory, you can run:
+## Process
 
-### `npm start`
+![component-tree](/readmeAssets/component-tree.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- First created a overview of how to approach the build.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Created an app and built out the file structure.
 
-### `npm test`
+- Generated data and stored in the public folder to be used with axios.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Created a custom hook to be able to use the data globaly and export funtions.
 
-### `npm run build`
+- Created the compnents and have them display the relevant information for each one.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Styling at the end.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Technologies Used
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- create-react-app
+- axios
+- Tailwind CSS
+- React Icons
+- Custom Hooks
 
-### `npm run eject`
+### Challenges
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Redux, I have ever used it before and tried to learn it for the assessment. It ended up not working how I wanted for a couple niche cases and felt messy. So I refactored to using custom hooks.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- useEffect, the more I use the hook the more I feel like I don't understand how it works. I really struggled with having my data showing up as undefined when passing it around. Especially with redux.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Styling, I struggle with the creative part of styling apps sometimes, but I always find it just helps to start one component at a time and it comes together slowly.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Search Bar, I really struggled with the functionality working right for me. It just took a lot of trial and error before I got it working the way I wanted. I have built search bars before, but because of the way I was passing around the data, it presented some issues with changing the actual data.
 
-## Learn More
+### What went well
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Organization of components
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Components are readable and clean, not too many with tons of lines of code.
 
-### Code Splitting
+- Breaking out the functionality and exports in a way so my import statemtents didn't get super messy.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Todos or what I would do differently
 
-### Analyzing the Bundle Size
+- Implement Redux and get it to work correctly.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- The CompanyStatistics component needs cleaning up.
 
-### Making a Progressive Web App
+- Find a way to add percentages, or just make the pie graphs a little more understandable. Also make them a little more beatiful, I like the idea of a donut graph.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- Find a better ascetic for the search bar, as well as adding an overall search bar to search by company and by user. The user search bar would have access to all the users and display which company they were a part of.
 
-### Advanced Configuration
+- Add more data and limit test what the current application can handle and change accordingly.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Add employess to the companies that would not be perpay users. That way I could display out of how many employees in a company actually use perpay. This could help judge how valuable a company's subcription is. Currently all the users displayed in the company are perpay users. I would do this by just adding another column to the users that would be a boolean. {"perpayUser" : true/false}.
